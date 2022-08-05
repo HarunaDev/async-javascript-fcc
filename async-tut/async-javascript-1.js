@@ -6,7 +6,7 @@
 // --Synchronous 
 // Synchronous simply means having blocks of code or functions that run after the previous block of code is executed.
 
-/* UNCOMMENT THIS BLOCK
+
 console.log(" I ")
 
 console.log(" eat ")
@@ -16,7 +16,7 @@ console.log(" ice cream ")
 console.log(" with ")
 
 console.log(" a spoon ")
-*/
+
 
 // in the result you can see that the phrases are printed out serially on the console, from top to bottom, and that is how synchronous javascript works.
 // feel free to change the order and see how it'll come out 
