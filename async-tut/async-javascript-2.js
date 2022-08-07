@@ -41,13 +41,18 @@ let production = (fruit_name) => {
   setTimeout(() => {
     console.log(`production has started`)
 
-    // Child
+    // Child -2 Cut fruits function
     setTimeout(() => {
       console.log(`${stocks.fruits[fruit_name]} has been chopped`)
 
-      // Grand-child
+      // Grand-child -3 Add water and ice function
       setTimeout(() => {
         console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} has been added`)
+
+        //-4 start the machine function
+        setTimeout(() => {
+          console.log(`machine was started`)
+        }, 1000)
       }, 1000)
     }, 2000)
   }, 500)
