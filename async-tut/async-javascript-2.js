@@ -60,6 +60,11 @@ let production = (fruit_name) => {
             //-6 Select the toppings function
             setTimeout(() => {
               console.log(`${stocks.toppings[1]} was sprinkled on ice-cream`);
+
+              //-7 Serve ice-cream function
+              setTimeout(() => {
+                console.log(`${stocks.fruits[fruit_name]} ice-cream was served to customer.`);
+              }, 2000)
             }, 3000)
           }, 2000);
         }, 1000);
