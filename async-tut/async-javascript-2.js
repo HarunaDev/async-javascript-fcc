@@ -27,10 +27,10 @@ let stocks = {
 let order = (fruit_name, call_production) => {
   setTimeout(() => {
     // we log a message and call the production function 
-    console.log(`${stocks.fruits[fruit_name]} Ice cream, was selected`)
-    call_production(fruit_name)
-  }, 2000)
-}
+    console.log(`${stocks.fruits[fruit_name]} Ice cream, was selected`);
+    call_production(fruit_name);
+  }, 2000);
+};
 
 // production function
 //i- we declare a function that takes a parameter 
@@ -39,29 +39,34 @@ let order = (fruit_name, call_production) => {
 let production = (fruit_name) => {
   // Parent
   setTimeout(() => {
-    console.log(`production has started`)
+    console.log(`production has started`);
 
     // Child -2 Cut fruits function
     setTimeout(() => {
-      console.log(`${stocks.fruits[fruit_name]} has been chopped`)
+      console.log(`${stocks.fruits[fruit_name]} has been chopped`);
 
       // Grand-child -3 Add water and ice function
       setTimeout(() => {
-        console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} has been added`)
+        console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} has been added`);
 
         //-4 Start the machine function
         setTimeout(() => {
-          console.log(`machine was started`)
+          console.log(`machine was started`);
 
-          //-5 Select the container
+          //-5 Select the container function
           setTimeout(() => {
             console.log(`ice-cream was poured into a ${stocks.holder[1]}`);
-          }, 2000)
-        }, 1000)
-      }, 1000)
-    }, 2000)
-  }, 500)
-}
+
+            //-6 Select the toppings function
+            setTimeout(() => {
+              console.log(`${stocks.toppings[1]} was sprinkled on ice-cream`);
+            }, 3000)
+          }, 2000);
+        }, 1000);
+      }, 1000);
+    }, 2000);
+  }, 500);
+};
 
 // we call the order function and pass in data as it's argument
-order(0, production)
+order(0, production);
