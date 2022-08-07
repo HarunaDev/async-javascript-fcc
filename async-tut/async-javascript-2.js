@@ -34,13 +34,21 @@ let order = (fruit_name, call_production) => {
 
 // production function
 //i- we declare a function that takes a parameter 
-// ii- within that function we call the setTimeout function with another setTimeout function nested within it. 
+// ii- within that function we call the setTimeout function with another setTimeout function nested within it.
+// iii- within the child callBack we call another callBack function, which leads us to a callBack hell. 
 let production = (fruit_name) => {
+  // Parent
   setTimeout(() => {
     console.log(`production has started`)
 
+    // Child
     setTimeout(() => {
       console.log(`${stocks.fruits[fruit_name]} has been chopped`)
+
+      // Grand-child
+      setTimeout(() => {
+        console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} has been added`)
+      }, 1000)
     }, 2000)
   }, 500)
 }
