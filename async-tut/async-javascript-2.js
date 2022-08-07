@@ -49,9 +49,14 @@ let production = (fruit_name) => {
       setTimeout(() => {
         console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} has been added`)
 
-        //-4 start the machine function
+        //-4 Start the machine function
         setTimeout(() => {
           console.log(`machine was started`)
+
+          //-5 Select the container
+          setTimeout(() => {
+            console.log(`ice-cream was poured into a ${stocks.holder[1]}`);
+          }, 2000)
         }, 1000)
       }, 1000)
     }, 2000)
@@ -59,4 +64,4 @@ let production = (fruit_name) => {
 }
 
 // we call the order function and pass in data as it's argument
-order(0,production)
+order(0, production)
