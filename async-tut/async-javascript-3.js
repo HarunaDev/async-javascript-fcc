@@ -20,11 +20,41 @@
 // * Error Handling
 // * The .finally handler
 
+// to better understand this lesson we will use the same ice-cream production process to understand Promise
+
+// -1. Place order, 2000  
+// -2. Cut the fruit, 2000 
+// -3. Add water and ice, 1000
+// -4. Start the machine, 1000
+// -5. Select the container, 2000
+// -6. Select the topping, 3000
+// -7. Serve Ice cream, 2000
+
 // store for keeping items used in making ice-cream
 let stocks = {
   fruits: ["strawberry", "grapes", "banana", "apple"],
   liquid: ["water", "ice"],
   holder: ["cone", "cup", "sticks"],
   toppings: ["chocolate", "peanuts"]
-}
+};
+
+// this expression shows that our shop is open
+let is_shop_open = true;
+
+// we create an order function that takes 'work' & 'time' as parameters and returns a new promise
+let order = (work, time) => {
+  // the promise takes in the two stages as an argument 
+  return new Promise( (resolve, reject) => {
+    
+    // check if store is open 
+    is_shop_open ? 
+    /*if store is open we use a callBack to form relationship between time and work in order to resolve the promise*/ 
+    setTimeout( () => resolve( work() ), time) :
+    /*if store is closed we call the reject handler*/ 
+    reject( console.log(`sorry we are closed`) )
+  });
+};
+
+// we call the order function and pass in an arrow function & a time as it's arguments
+order( () => console.log(`${stocks.fruits[0]} ice-cream was selected`), 2000)
 
