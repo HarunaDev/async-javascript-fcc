@@ -20,3 +20,11 @@
 // * Error Handling
 // * The .finally handler
 
+// store for keeping items used in making ice-cream
+let stocks = {
+  fruits: ["strawberry", "grapes", "banana", "apple"],
+  liquid: ["water", "ice"],
+  holder: ["cone", "cup", "sticks"],
+  toppings: ["chocolate", "peanuts"]
+}
+
