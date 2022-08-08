@@ -75,3 +75,6 @@ let production = (fruit_name) => {
 
 // we call the order function and pass in data as it's argument
 order(0, production);
+
+// this is an example of a callBack hell, a callBack is a relationship between different functions and a callBack hell is basically having a large family in that relationship, just like the 'Casagrandes' cartoon series on Nickolodeon, but Promises was introduced to solve this problem. 
+// we will talk about Promises in the next lesson 
