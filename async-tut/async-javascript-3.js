@@ -66,4 +66,6 @@ order( () => console.log(`${stocks.fruits[0]} ice-cream was selected`), 2000)
 } )
 
 // we can chain as many .then handler as long as there is no character separating them
-
+.then( () => {
+  return order( () => console.log(`${stocks.fruits[0]} was chopped`), 2000)
+})
