@@ -58,3 +58,12 @@ let order = (work, time) => {
 // we call the order function and pass in an arrow function & a time as it's arguments
 order( () => console.log(`${stocks.fruits[0]} ice-cream was selected`), 2000)
 
+// we chain the promise with '.then()' handler and it takes an arrow function that returns a callBack function
+
+.then( () => {
+  // it should always return something, otherwise your code won't work
+  return order(() => console.log(`production has started`), 500)
+} )
+
+// we can chain as many .then handler as long as there is no character separating them
+
