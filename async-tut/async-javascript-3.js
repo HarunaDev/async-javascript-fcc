@@ -69,3 +69,7 @@ order( () => console.log(`${stocks.fruits[0]} ice-cream was selected`), 2000)
 .then( () => {
   return order( () => console.log(`${stocks.fruits[0]} was chopped`), 2000)
 })
+
+.then( () => {
+  return order( () => console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} were added.`), 1000)
+})
