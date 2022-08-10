@@ -39,7 +39,7 @@ let stocks = {
 };
 
 // this expression shows that our shop is open
-let is_shop_open = true;
+let is_shop_open = false;
 
 // we create an order function that takes 'work' & 'time' as parameters and returns a new promise
 let order = (work, time) => {
@@ -88,4 +88,11 @@ order( () => console.log(`${stocks.fruits[0]} ice-cream was selected`), 2000)
 
 .then( () => {
   return order( () => console.log(`${stocks.fruits[0]} ice-cream was served to customer`), 2000)
+})
+
+// error handling. we call the catch method at the end of our promise chaining to catch en error, for instance if our chop is closed the block of code below will run
+// we need to change the is_shop_open variable that we initialized earlier to false
+
+.catch( () => {
+  console.log(`customer left`)
 })
