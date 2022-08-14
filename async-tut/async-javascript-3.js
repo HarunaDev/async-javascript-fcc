@@ -96,3 +96,8 @@ order( () => console.log(`${stocks.fruits[0]} ice-cream was selected`), 2000)
 .catch( () => {
   console.log(`customer left`)
 })
+
+// finally handler. it will always run whether a promise is resolved or rejected.
+// after the promise chaining and error handling functions has been performed, we call the .finally handler with an arrow function that returns a statement.
+
+.finally( () => console.log("day has ended, shop closed"))
